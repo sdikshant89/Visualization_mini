@@ -58,7 +58,12 @@ export default function ButtonAppBar() {
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center" }}>
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            <Typography
+              variant="h4"
+              component="div"
+              fontWeight="bold"
+              sx={{ flexGrow: 1, color: "#282c34" }}
+            >
               Visualization Mini Project
             </Typography>
           </div>
