@@ -54,22 +54,21 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
-        sx={{ height: "6.75vh", backgroundColor: "#8c96a8" }}
+        sx={{ height: "6.75vh", backgroundColor: "#0288D1" }}
       >
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <Typography
-              variant="h4"
-              component="div"
-              fontWeight="bold"
-              sx={{ flexGrow: 1, color: "#282c34" }}
-            >
-              Visualization Mini Project
-            </Typography>
-          </div>
+        <Toolbar>
+          <Typography
+            variant="h3"
+            component="div"
+            fontWeight="bold"
+            sx={{ flexGrow: 1, color: "black" }}
+          >
+            Visualization Mini Project
+          </Typography>
+
           <Button
             variant="contained"
-            sx={{ backgroundColor: "#535b6c" }}
+            color="secondary"
             onClick={handleClickOpen}
           >
             About
