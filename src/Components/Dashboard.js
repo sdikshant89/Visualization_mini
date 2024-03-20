@@ -5,6 +5,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import MybarChart from "./DashGraph";
+import Datainfo from "./DatasetInfo";
 
 export default function myDash(props) {
   return (
@@ -13,14 +14,14 @@ export default function myDash(props) {
         flexGrow: 1,
         padding: "0.05vh 0.05vw 2vh 0.05vw",
         height: "89.25vh",
-        backgroundColor: "#80DEEA",
+        backgroundColor: "white",
       }}
     >
       <Grid container spacing={2} sx={{ height: "100%" }}>
         <Grid item xs={6} sx={{ height: "100%" }}>
           <Paper
             elevation={3}
-            sx={{ height: "100%", backgroundColor: "#00796B" }}
+            sx={{ height: "100%", backgroundColor: "#808B96" }}
           >
             <Typography
               variant="h4"
@@ -31,7 +32,7 @@ export default function myDash(props) {
               fontWeight="bold"
               color="white"
             >
-              Bar Chart Viz
+              COVID-19 Data: Edmonton City Areas
               <MybarChart />
             </Typography>
           </Paper>
@@ -41,7 +42,7 @@ export default function myDash(props) {
             <Grid item xs={6} sx={{ height: "100%" }}>
               <Paper
                 elevation={3}
-                sx={{ height: "100%", backgroundColor: "#0288D1" }}
+                sx={{ height: "100%", backgroundColor: "#979A9A" }}
               >
                 <Typography
                   variant="h4"
@@ -52,16 +53,16 @@ export default function myDash(props) {
                   fontWeight="bold"
                   color="white"
                 >
-                  Pie Chart for Analysis
+                  COVID-19 Deaths
                 </Typography>
                 <PieChart
                   sx={{ padding: "1vh 0.5vw 1vh 0.5vw" }}
                   series={[
                     {
                       data: [
-                        { id: 0, value: 10, label: "series A" },
-                        { id: 1, value: 15, label: "series B" },
-                        { id: 2, value: 20, label: "series C" },
+                        { id: 0, value: 1456, label: "Edmonton" },
+                        { id: 1, value: 1167, label: "Calgary" },
+                        { id: 2, value: 2266, label: "Misc" },
                       ],
                     },
                   ]}
@@ -74,10 +75,10 @@ export default function myDash(props) {
                   align="left"
                   paddingLeft="1vw"
                   paddingTop="0.5vh"
-                  color="white"
+                  color="Black"
                 >
-                  *This is a sample text to represent the above graph
-                  visaulising the data
+                  Percentages shown represents the proportion of total COVID-19
+                  deaths in Alberta
                 </Typography>
               </Paper>
             </Grid>
@@ -96,15 +97,16 @@ export default function myDash(props) {
                   fontWeight="bold"
                   color="white"
                 >
-                  Data Predictions
+                  Alberta Overview
                 </Typography>
+                <Datainfo />
               </Paper>
             </Grid>
           </Grid>
           <Box sx={{ height: "2%" }} />
           <Paper
             elevation={3}
-            sx={{ height: "50%", backgroundColor: "#F4511E" }}
+            sx={{ height: "50%", backgroundColor: "#DC7633" }}
           >
             <ViewTable data={props.data} />
           </Paper>

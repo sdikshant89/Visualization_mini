@@ -1,0 +1,6 @@
+.custom-line-chart .recharts-cartesian-axis-ticks line,
+.custom-line-chart .recharts-cartesian-axis-tick-value {
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+}

@@ -10,6 +10,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Link from "@mui/material/Link";
+import Logo from "../Data/virus.png";
 
 export default function ButtonAppBar() {
   const [open, setOpen] = React.useState(false);
@@ -54,16 +55,27 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
-        sx={{ height: "6.75vh", backgroundColor: "#0288D1" }}
+        sx={{ height: "6.75vh", backgroundColor: "#AED6F1" }}
       >
         <Toolbar>
           <Typography
-            variant="h3"
+            variant="h4"
             component="div"
             fontWeight="bold"
-            sx={{ flexGrow: 1, color: "black" }}
+            sx={{ flexGrow: 1, color: "#4A235A" }}
+            gutterBottom
           >
-            Visualization Mini Project
+            <img
+              src={Logo}
+              style={{ width: "2%", height: "auto" }}
+              alt="../Data/big_virus.jpeg"
+            />{" "}
+            Data Insights Dashboard: Visualizing COVID-19 Trends in Alberta{" "}
+            <img
+              src={Logo}
+              style={{ width: "2%", height: "auto" }}
+              alt="../Data/big_virus.jpeg"
+            />
           </Typography>
 
           <Button

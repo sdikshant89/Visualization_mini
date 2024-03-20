@@ -1,24 +1,38 @@
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 
+const tableData = require("../Data/dataset.json");
+
 const columns = [
-  { field: "id", headerName: "ID", width: 90 },
   {
-    field: "userId",
-    headerName: "User ID",
-    width: 90,
+    field: "Location",
+    headerName: "Alberta Area",
+    description: "Alberta areas",
+    width: 300,
   },
   {
-    field: "title",
-    headerName: "Title",
-    width: 230,
+    field: "Total Cases",
+    headerName: "Total Cases",
+    width: 100,
   },
   {
-    field: "body",
-    headerName: "Description",
-    description: "This column has a value getter and is not sortable.",
+    field: "Active Cases",
+    headerName: "Active Cases",
+    width: 100,
+  },
+  {
+    field: "Deaths",
+    headerName: "Deaths",
+    description: "Deaths till date",
+    width: 80,
+  },
+  {
+    field: "# of population fully immunized",
+    headerName: "Immunised Population",
+    description:
+      "Number of people in the area vaccinated all the way with both doses",
     sortable: false,
-    width: 280,
+    width: 170,
   },
 ];
 
@@ -26,7 +40,7 @@ export default function DataGridDemo(props) {
   return (
     <Box sx={{ height: "90%", width: "95%", padding: "2vh 1vw 2vh 1vw" }}>
       <DataGrid
-        rows={props.data}
+        rows={tableData}
         columns={columns}
         initialState={{
           pagination: {

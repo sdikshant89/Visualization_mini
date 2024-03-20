@@ -48,7 +48,7 @@ export default function MainPageTabs(props) {
   };
 
   return (
-    <Box sx={{ width: "100%", backgroundColor: "#80DEEA" }}>
+    <Box sx={{ width: "100%", backgroundColor: "white" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
