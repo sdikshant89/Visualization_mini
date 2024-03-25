@@ -56,7 +56,13 @@ export default function myDash(props) {
                   COVID-19 Deaths
                 </Typography>
                 <PieChart
-                  sx={{ padding: "1vh 0.5vw 1vh 0.5vw" }}
+                  height={window.innerHeight * 0.25}
+                  width={window.innerWidth * 0.25}
+                  sx={{
+                    padding: "0.2vh 0.5vw 1vh 0.5vw",
+                    // display: "flex",
+                    // justifyContent: "space-around",
+                  }}
                   series={[
                     {
                       data: [
@@ -66,8 +72,6 @@ export default function myDash(props) {
                       ],
                     },
                   ]}
-                  width={425}
-                  height={275}
                 />
                 <Typography
                   variant="body1"
@@ -76,9 +80,10 @@ export default function myDash(props) {
                   paddingLeft="1vw"
                   paddingTop="0.5vh"
                   color="Black"
+                  height={window.innerHeight * 0.1}
                 >
-                  Percentages shown represents the proportion of total COVID-19
-                  deaths in Alberta
+                  Percentages represents the proportion of total COVID-19 deaths
+                  in Alberta
                 </Typography>
               </Paper>
             </Grid>

@@ -32,7 +32,7 @@ export default function BarAnimation() {
   return (
     <Box sx={{ width: "98%", paddingTop: "1vh" }}>
       <BarChart
-        height={650}
+        height={window.innerHeight * 0.7}
         series={series.slice(0, seriesNb).map((s) => ({
           ...s,
           data: s.data.slice(0, itemNb),

@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 
 export default function DatasetInfo() {
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} sx={{ height: "50%" }}>
       <Grid item xs={9}>
         <Typography
           variant="h6"
@@ -14,6 +14,7 @@ export default function DatasetInfo() {
           paddingLeft="1vw"
           paddingTop="1vh"
           color="white"
+          height={window.innerHeight * 0.02}
         >
           No. of People fully vaccinated
         </Typography>
@@ -41,6 +42,7 @@ export default function DatasetInfo() {
           paddingLeft="1vw"
           paddingTop="1vh"
           color="white"
+          height={window.innerHeight * 0.02}
         >
           Total Area Covered
         </Typography>
@@ -68,6 +70,7 @@ export default function DatasetInfo() {
           paddingLeft="1vw"
           paddingTop="1vh"
           color="white"
+          height={window.innerHeight * 0.02}
         >
           Total Deaths
         </Typography>
@@ -95,6 +98,7 @@ export default function DatasetInfo() {
           paddingLeft="1vw"
           paddingTop="1vh"
           color="white"
+          height={window.innerHeight * 0.02}
         >
           Total Unvaccinated
         </Typography>
@@ -122,6 +126,7 @@ export default function DatasetInfo() {
           paddingLeft="1vw"
           paddingTop="1vh"
           color="white"
+          height={window.innerHeight * 0.02}
         >
           people vaccinated (least once)
         </Typography>
